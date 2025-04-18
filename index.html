@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>mine</title>
+  <link rel="stylesheet" href="style.css" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+</head>
+<body>
+
+  <!-- Fixed Vertical Navigation Bar -->
+  <div class="vertical-nav">
+    <button id="darkModeToggle">🌙</button>
+    <a href="home.html">Home</a>
+    <a href="about.html">About</a>
+    <a href="skill.html">Skills</a>
+    <a href="Project.html">Projects</a>
+    <a href="Contact.html">Contact</a>
+    
+  </div>
+
+  <!-- Main Content Section -->
+  <div class="main-content">
+    <!-- Left Content (40% width) -->
+    <div class="left-content">
+      <!-- Top Section (Resume Button and Profile Image) -->
+      <div class="top-section">
+        <div class="profile-image">
+          <img src="aadhish.jpg" alt="Aadhish" />
+          <div class="profile-text">I'm,</div>
+        </div>
+      </div>
+
+      <!-- Bottom Section (Intro Text and Social Icons) -->
+      <div class="bottom-section">
+        <div class="intro-text">
+          <h1>Aadhish</h1>
+          <h3><span class="typed-text"></span></h3>
+        </div>
+
+        <div class="social-icons">
+          <a href="https://www.linkedin.com/in/aadhish--raj/" target="_blank"><i class="fab fa-linkedin"></i></a>
+          <a href="https://x.com/RajAadhish" target="_blank"><i class="fab fa-twitter"></i></a>
+          <a href="https://github.com/aadhishraj" target="_blank"><i class="fab fa-github"></i></a>
+          <a href="mailto:aadhishraj14122004@gmail.com"><i class="fas fa-envelope"></i></a>
+        </div>
+      </div>
+    </div>
+
+    <!-- Right Content (Empty space with background color) -->
+    <div class="right-content">
+      <div class="about-box">
+        <div class="about-text">
+          <p>
+            Hi, I'm Aadhish Raj — a passionate full stack developer with experience in MERN stack and DSA.
+            Hi, I'm Aadhish Raj — a passionate full stack developedfs my name is aadhishf sfl 
+            Hi, I'm Aadhish Raj — a passionate full stack developedfs my name is 
+  
+            <a href="about.html" class="more-link">more>>></a>
+          </p>
+        </div>
+        <div class="download-button">
+          <a href="resume.pdf" download="resume.pdf">
+            <button>Download CV</button>
+          </a>
+      </div>
+      </div>
+      <div class="main-container">
+        <!-- Left Side: Project -->
+        <div class="left-section">
+          <div class="project-section">
+            <div class="project-title">Projects</div>
+            <div class="project-box">
+              <div class="project-gallery">
+                <a href="https://www.linkedin.com/in/aadhish--raj/" target="_blank">
+                  <img src="project1.jpg" alt="Project 1" class="project-image">
+                </a>
+                <a href="https://example2.com" target="_blank">
+                  <img src="aadhish.jpg" alt="Project 2" class="project-image">
+                </a>
+                <a href="https://example3.com" target="_blank">
+                  <img src="project1.jpg" alt="Project 3" class="project-image">
+                </a>
+                <a href="https://example4.com" target="_blank">
+                  <img src="aadhish.jpg" alt="Project 4" class="project-image">
+                </a>
+                <a href="https://example5.com" target="_blank">
+                  <img src="project1.jpg" alt="Project 5" class="project-image">
+                </a>
+              </div>
+              
+            </div>
+            <a href="project.html" class="more-btn"><b>More</b></a>
+          </div>
+        </div>
+      
+        <!-- Right Side: Skill + Contact -->
+        <div class="right-section">
+          <div class="skills-section">
+            <h3>Skills</h3>
+            <div class="skills-icons">
+              <div class="skill html"><i class="fa-brands fa-html5"></i><span>HTML</span></div>
+              <div class="skill css"><i class="fa-brands fa-css3-alt"></i><span>CSS</span></div>
+              <div class="skill js"><i class="fa-brands fa-js"></i><span>JS</span></div>
+              <div class="skill github"><i class="fa-brands fa-github"></i><span>GitHub</span></div>
+              <div class="skill mongodb"><i class="fa-solid fa-leaf"></i><span>MongoDB</span></div>
+              <div class="skill node"><i class="fa-brands fa-node-js"></i><span>Node</span></div>
+              <div class="skill express"><i class="fa-solid fa-code"></i><span>Express</span></div>
+              <div class="skill react"><i class="fa-brands fa-react"></i><span>React</span></div>
+              <div class="skill more">
+                  <a href="Project.html"><i class="fa-solid fa-ellipsis"></i><span><button><b>More >>></b></button></span></a>
+                  
+                   </div>
+            </div>
+          </div>
+          <div class="contact-section">
+    <form id="contactForm">
+      <div class="form-group">
+        <label for="name">Name *</label>
+        <input type="text" id="name" name="name" required/>
+      </div>
+      <div class="form-group">
+        <label for="email">Email *</label>
+        <input type="email" id="email" name="email" required/>
+      </div>
+      <div class="form-group">
+        <label for="phone">Phone no. (optional)</label>
+        <input type="tel" id="phone" name="phone"/>
+      </div>
+      <div class="form-group">
+        <label for="message">Message *</label>
+        <textarea id="message" name="message" required></textarea>
+      </div>
+      <div class="submit-container">
+        <a href="mailto:aadhishraj14122004@gmail.com"><b>or send direct email</b></a>
+        <b>contact me</b>
+        <button type="submit">Submit</button>
+        <div id="loadingPopup">⏳ Sending your message...</div>
+      </div>
+    </form>
+          </div>
+        </div>
+      </div>
+      
+        
+      </div>
+    </div>
+    
+      
+      <!-- Content will adjust based on available space -->
+    </div>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
