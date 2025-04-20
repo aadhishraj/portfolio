@@ -1,28 +1,48 @@
+/* 
+  Portfolio Website CSS
+  Color Palette: #205781, #4F959D, #98D2C0, #F6F8D5
+  Optimized and reorganized for better structure and performance
+*/
+
+/* Base and Reset Styles */
 html, body {
   height: 100%;
   margin: 0;
   padding: 0;
   font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-  background-color: #F6F8D5; /* light background color */
+  background-color: #F6F8D5;
+}
+
+body {
+  height: 100vh;
   display: flex;
   flex-direction: row;
 }
 
-body {
-  margin: 0;
-  padding: 0;
-  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+/* Layout Structure */
+.main-content {
+  margin-left: 90px;
+  display: flex;
+  flex-direction: row;
+  width: 100%;
   height: 100vh;
+  overflow: hidden;
 }
 
-/* Vertical Navigation Bar */
+.main-container {
+  display: flex;
+  max-height: 90vh;
+  overflow-y: auto;
+}
+
+/* Navigation */
 .vertical-nav {
   position: fixed;
   top: 0;
   left: 0;
   width: 90px;
   height: 100vh;
-  background: linear-gradient(#205781, #4F959D); /* Gradient with your primary colors */
+  background: linear-gradient(#205781, #4F959D);
   border-right: 1px solid #ccc;
   box-shadow: 2px 0 8px rgba(0, 0, 0, 0.05);
   display: flex;
@@ -39,7 +59,7 @@ body {
   writing-mode: vertical-rl;
   transform: rotate(180deg);
   text-decoration: none;
-  color: #F6F8D5; /* Light color text */
+  color: #F6F8D5;
   font-size: 1.3rem;
   font-weight: 650;
   position: relative;
@@ -47,7 +67,7 @@ body {
 }
 
 .vertical-nav a:hover {
-  color: #98D2C0; /* Hover color change */
+  color: #98D2C0;
   transform: rotate(180deg) scale(1.2);
 }
 
@@ -67,22 +87,12 @@ body {
   width: 100%;
 }
 
-/* Main Content Container */
-.main-content {
-  margin-left: 90px;
-  display: flex;
-  flex-direction: row;
-  width: 100%;
-  height: 100vh;
-  overflow: hidden;
-}
-
-/* Left Section */
+/* Left Content Section */
 .left-content {
   width: 25%;
   display: flex;
   flex-direction: column;
-  background: linear-gradient(to right, #F6F8D5, #98D2C0); /* Gradient for left section */
+  background: linear-gradient(to right, #F6F8D5, #98D2C0);
   padding: 20px;
   box-sizing: border-box;
   height: 100%;
@@ -108,11 +118,9 @@ body {
   font-weight: bold;
   position: absolute;
   top: 0;
-  bottom: 0;
   left: 8px;
-  padding: 6px;
-  padding-top: 0px;
-  margin-top: 0px;
+  padding: 6px 6px 6px 6px;
+  margin-top: 0;
 }
 
 .profile-image {
@@ -132,7 +140,6 @@ body {
   margin-left: auto;
 }
 
-/* Bottom Section */
 .bottom-section {
   flex: 1;
   display: flex;
@@ -150,7 +157,7 @@ body {
 
 .intro-text h1 {
   font-size: 3.5rem;
-  color: #205781; /* Darker color for text */
+  color: #205781;
   margin: 10px 0;
 }
 
@@ -165,7 +172,7 @@ body {
   margin-top: 8px;
 }
 
-/* Social Media Icons */
+/* Social Media */
 .social-icons {
   display: flex;
   justify-content: center;
@@ -176,19 +183,19 @@ body {
 }
 
 .social-icons a {
-  color: #205781; /* Social icons color */
+  color: #205781;
   transition: transform 0.3s ease, color 0.3s ease;
 }
 
 .social-icons a:hover {
-  color: #4F959D; /* Hover color for social icons */
+  color: #4F959D;
   transform: scale(1.2);
 }
 
-/* Right Section */
+/* Right Content Section */
 .right-content {
   width: 75%;
-  background: linear-gradient(to right, #98D2C0, #205781); /* Gradient for right section */
+  background: linear-gradient(to right, #98D2C0, #205781);
   box-sizing: border-box;
   padding: 10px;
   height: 100%;
@@ -197,13 +204,13 @@ body {
   gap: 20px;
 }
 
-/* About Section */
+/* About Box */
 .about-box {
   display: flex;
   justify-content: space-between;
   align-items: flex-start;
-  gap:5px;
-  padding:10px;
+  gap: 5px;
+  padding: 10px;
   border: 2px solid black;
   border-radius: 10px;
   width: 100%;
@@ -213,12 +220,12 @@ body {
 }
 
 .about-text p {
-  flex:1;
+  flex: 1;
   font-style: italic;
   font-size: 16px;
   color: #333;
-  line-height: auto;
-  margin:0;
+  line-height: normal;
+  margin: 0;
 }
 
 .more-link {
@@ -242,7 +249,7 @@ body {
   font-weight: bold;
   cursor: pointer;
   border: 2px solid black;
-  background-color: #98D2C0; /* Light blue background */
+  background-color: #98D2C0;
   color: white;
   transition: background-color 0.3s ease;
   border-radius: 5px;
@@ -251,15 +258,10 @@ body {
 }
 
 .download-button button:hover {
-  background-color: #205781; /* Darker blue on hover */
-}
-.main-container {
-  display: flex;
-  max-height: 90vh;
-  overflow-y: auto;
+  background-color: #205781;
 }
 
-/* Left 40% - Project Section */
+/* Project Section */
 .left-section {
   width: 50%;
   padding: 5px;
@@ -278,20 +280,26 @@ body {
   font-weight: bold;
   margin-bottom: 20px;
   text-align: center;
-  color: #205781; /* Added color from the palette */
+  color: #205781;
 }
 
 .project-box {
   position: relative;
   height: 100%;
-  border: 2px solid #4f959d; /* Added color from the palette */
+  border: 2px solid #4f959d;
   overflow: hidden;
   display: flex;
   justify-content: center;
   align-items: center;
   flex-direction: column;
   border-radius: 10px;
-  background-color: #98d2c0; /* Added color from the palette */
+  background-color: #98d2c0;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.project-box:hover {
+  transform: scale(1.05);
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
 }
 
 .project-gallery {
@@ -313,54 +321,48 @@ body {
   object-fit: cover;
 }
 
-.project-box:hover {
-  transform: scale(1.05);
-  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
-  transition: transform 0.3s ease, box-shadow 0.3s ease;
-}
-
 .more-btn {
   margin-top: 10px;
-  background: #4f959d; /* Added color from the palette */
+  background: #4f959d;
   color: white;
   padding: 8px 16px;
   border-radius: 5px;
   text-decoration: none;
   text-align: center;
+  transition: background-color 0.3s ease;
 }
 
 .more-btn:hover {
-  background-color: #205781; /* Added color from the palette */
+  background-color: #205781;
 }
 
-/* Right 60% - Skill and Contact Section */
+/* Skills Section */
 .right-section {
   width: 50%;
   display: flex;
   flex-direction: column;
   padding: 5px;
-  padding-bottom: 30px; /* Niche se space chhodne ke liye */
+  padding-bottom: 30px;
   box-sizing: border-box;
   height: 100%;
 }
 
-/* 35% height - Skills */
 .skills-section {
   flex: 0 0 25%;
-  border: 2px solid #4f959d; /* Added color from the palette */
-  background-color: #f6f8d5; /* Added color from the palette */
-  padding: 0px;
+  border: 2px solid #4f959d;
+  background-color: #f6f8d5;
+  padding: 0;
   border-radius: 10px;
   box-sizing: border-box;
   text-align: center;
-  padding-bottom: 5px; /* kam padding niche */
+  padding-bottom: 5px;
   margin-bottom: 5px;
 }
 
 .skills-section h3 {
   font-size: 20px;
-  margin: 0px 0;
-  color: #205781; /* Added color from the palette */
+  margin: 0;
+  color: #205781;
 }
 
 .skills-icons {
@@ -384,29 +386,27 @@ body {
   transition: transform 0.3s ease;
 }
 
+.skill:hover {
+  transform: scale(1.1);
+}
+
 .skill i {
   font-size: 28px;
   margin-bottom: 5px;
 }
 
-/* Hover effect */
-.skill:hover {
-  transform: scale(1.1);
-}
-
-/* Specific colors */
+/* Skill colors */
 .skill.html { background-color: #e44d26; }
 .skill.css { background-color: #264de4; }
 .skill.js { background-color: #f0db4f; color: #000; }
 .skill.github { background-color: #333; }
 .skill.mongodb { background-color: #4db33d; }
-.skill.express { background-color: #444; } /* Express = dark gray */
+.skill.express { background-color: #444; }
 .skill.react { background-color: #61dbfb; color: #000; }
 .skill.node { background-color: #3c873a; }
-.skill.more {background-color: #000;}
+.skill.more { background-color: #000; }
 
-/* 65% height - Contact */
-/* Form container */
+/* Contact Form */
 form {
   display: flex;
   flex-direction: column;
@@ -414,29 +414,26 @@ form {
   padding: 10px;
   flex: 1;
   overflow-y: auto;
-  max-width: 500px;  /* Set desired max width */
-  margin: 0 auto;    /* Center the form */
-  background-color: #6bdae0; /* Added color from the palette */
+  max-width: 500px;
+  margin: 0 auto;
+  background-color: #6bdae0;
   border: 1px solid #ddd;
   border-radius: 8px;
 }
 
-/* Form group styling */
 .form-group {
   display: flex;
   flex-direction: row;
   align-items: center;
-  gap:10px
+  gap: 10px;
 }
 
-/* Label style */
 .form-group label {
   margin-bottom: 5px;
   font-weight: bold;
   color: #333;
 }
 
-/* Input & Textarea style */
 .form-group input,
 .form-group textarea {
   padding: 2px;
@@ -450,31 +447,28 @@ form {
 
 .form-group input:focus,
 .form-group textarea:focus {
-  border-color: #4f959d; /* Added color from the palette */
+  border-color: #4f959d;
 }
 
-/* Textarea height */
 textarea {
   resize: vertical;
   min-height: 40px;
   max-height: 100px;
 }
 
-/* Submit + Email container */
 .submit-container {
   display: flex;
   align-items: center;
   justify-content: space-between;
   flex-wrap: wrap;
-  gap: 0px;
-  margin-top: 0px;
-  width:100%
+  gap: 0;
+  margin-top: 0;
+  width: 100%;
 }
 
-/* Submit button */
 .submit-container button {
   padding: 2px 7px;
-  background-color: #4f959d; /* Added color from the palette */
+  background-color: #4f959d;
   color: #fff;
   border: none;
   border-radius: 6px;
@@ -484,10 +478,9 @@ textarea {
 }
 
 .submit-container button:hover {
-  background-color: #205781; /* Added color from the palette */
+  background-color: #205781;
 }
 
-/* "Or send direct email" link */
 .submit-container a {
   font-size: 15px;
   color: #015565;
@@ -499,6 +492,7 @@ textarea {
   text-decoration: underline;
 }
 
+/* Loading Popup */
 #loadingPopup {
   display: none;
   position: fixed;
@@ -514,7 +508,29 @@ textarea {
   box-shadow: 0 0 10px rgba(0,0,0,0.3);
 }
 
-/* Light Dark Mode Styles */
+/* Dark Mode Toggle */
+#darkModeToggle {
+  background-color: #3C2A21;
+  color: #D5CEA3;
+  border: none;
+  padding: 10px 15px;
+  font-size: 20px;
+  border-radius: 30px;
+  cursor: pointer;
+  transition: background-color 0.3s, transform 0.2s ease-in-out;
+}
+
+#darkModeToggle:hover {
+  background-color: #1A120B;
+  transform: scale(1.1);
+}
+
+#darkModeToggle:focus {
+  outline: none;
+  box-shadow: 0 0 10px #E5E5CB;
+}
+
+/* Dark Mode Styles */
 .dark-mode {
   background-color: #181C14;
   color: #ECDFCC;
@@ -537,21 +553,18 @@ textarea {
   background-color: #697565;
 }
 
-/* Main Content */
 .dark-mode .left-content {
   background: linear-gradient(to right, #181C14, #3C3D37);
 }
 
 .dark-mode .social-icons a {
-  color: #ECDFCC; /* or any default color */
-  transition: transform 0.3s ease, color 0.3s ease;
+  color: #ECDFCC;
 }
 
 .dark-mode .right-content {
   background: linear-gradient(to right, #3C3D37, #181C14);
 }
 
-/* About Box */
 .dark-mode .about-box {
   background: linear-gradient(to right, #181C14, #3C3D37);
   border-color: #697565;
@@ -569,7 +582,6 @@ textarea {
   color: #ECDFCC;
 }
 
-/* Button */
 .dark-mode .download-button button,
 .dark-mode .submit-container button,
 .dark-mode .more-btn {
@@ -584,18 +596,15 @@ textarea {
   color: #181C14;
 }
 
-/* Project Box */
 .dark-mode .project-box {
   border-color: #697565;
 }
 
-/* Skills */
 .dark-mode .skills-section {
   background-color: #3C3D37;
   border-color: #697565;
 }
 
-/* Form */
 .dark-mode form {
   background-color: #181C14;
   border-color: #697565;
@@ -617,37 +626,16 @@ textarea {
   border-color: #697565;
 }
 
-/* Email Link */
 .dark-mode .submit-container a {
   color: #697565;
 }
 
-/* Loader */
 .dark-mode #loadingPopup {
   background-color: #3C3D37;
   color: #ECDFCC;
 }
-#darkModeToggle {
-  background-color: #3C2A21; /* Dark brown background */
-  color: #D5CEA3; /* Light color text */
-  border: none;
-  padding: 10px 15px;
-  font-size: 20px;
-  border-radius: 30px; /* Rounded edges */
-  cursor: pointer;
-  transition: background-color 0.3s, transform 0.2s ease-in-out; /* Smooth transitions */
-}
 
-#darkModeToggle:hover {
-  background-color: #1A120B; /* Darker brown on hover */
-  transform: scale(1.1); /* Slight zoom effect on hover */
-}
-
-#darkModeToggle:focus {
-  outline: none; /* Remove outline */
-  box-shadow: 0 0 10px #E5E5CB; /* Glow effect when focused */
-}
-/* Responsive Styles */
+/* Responsive Design */
 @media (max-width: 768px) {
   .vertical-nav {
     width: 70px;
@@ -657,12 +645,19 @@ textarea {
     font-size: 1.5rem;
   }
 
-  .left-content {
-    width: 60%;
+  .main-content {
+    flex-direction: column;
+    margin-left: 70px;
   }
 
+  .left-content,
   .right-content {
-    width: 40%;
+    width: 100%;
+  }
+  
+  .left-section,
+  .right-section {
+    width: 100%;
   }
 }
 
@@ -674,41 +669,33 @@ textarea {
   .vertical-nav a {
     font-size: 1.25rem;
   }
-
-  .left-content {
-    width: 80%;
-  }
-
-  .right-content {
-    width: 20%;
-  }
-}
-
-@media (max-width: 480px) {
-  .submit-container {
-    flex-direction: column;
-    align-items: flex-start;
-  }
-}
-@media (max-width: 768px) {
+  
   .main-content {
-    flex-direction: column;
-    margin-left: 0;
+    margin-left: 60px;
   }
 
   .left-content,
-  .right-content {
-    width: 100%;
-  }
-}
-@media (max-width: 480px) {
-  .left-content,
-  .right-content {
-    width: 100%;
-  }
-
+  .right-content,
   .left-section,
   .right-section {
     width: 100%;
   }
-} 
+
+  .submit-container {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+  
+  .profile-image img {
+    width: 150px;
+    height: 150px;
+  }
+  
+  .intro-text h1 {
+    font-size: 2.5rem;
+  }
+  
+  .intro-text h3 {
+    font-size: 1.5rem;
+  }
+}
