@@ -47,7 +47,7 @@ document.addEventListener("DOMContentLoaded", function () {
         loading = true;
         if (loadingPopup) loadingPopup.style.display = "block";
 
-        const res = await fetch("/api/contact", {
+        const res = await fetch("server.js", {
           method: "POST",
           headers: { "Content-Type": "application/json" },
           body: JSON.stringify(data),
